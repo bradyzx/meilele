@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/cart.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="cart_head">
+			<div class="top">
+				<div class="wrap">
+					<ul class="top_left">
+						<li>
+							<a href="login.html" ><span class="text">请登录</span></a>
+							<a href="register.html" ><span class="text">免费注册</span></a>
+						</li>
+					</ul>
+					<ul class="top_right">
+						<li>
+							<a href="#" target="_blank" class="mymll">
+								<span class="text">我的美乐乐</span>
+								<i class="arrow"></i>
+							</a>
+							<div class="mymll_down">
+								<a href="#">我的订单</a>
+								<a href="#">我的金币</a>
+								<a href="#">我的红包</a>
+								<a href="#">我的收藏</a>
+								<a href="#">我要评价</a>
+								<a href="#">申请保价</a>
+							</div>
+						</li>
+						<li>
+							<i class="icon"></i>
+							<a href="#">
+								<span class="text">
+									购物车
+									<strong>0</strong>
+								</span>
+							</a>
+							<i class="arrow"></i>
+							<div class="cart">
+								购物车中还没有商品，赶紧选购吧！
+							</div>
+						</li>
+						<li>
+							<i class="gz"></i>
+							<span class="text">
+								关注美乐乐
+							</span>
+							<i class="arrow"></i>
+						</li>
+						<li>
+							<span class="text">
+								帮助中心
+							</span>
+							<i class="arrow"></i>
+						</li>
+						<li>
+							<span class="text">收藏本站</span>
+						</li>
+						<li>
+							全国热线：<strong class="red bold">400 0098666</strong>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--logo行-->
+		<div class="loge_search">
+			<div class="wrap clear">
+				<div class="logo">
+					<img src="img/logo.png"/>
+				</div>
+				<div class="step"></div>
+			</div>
+		</div>
+		<!--我的购物车行-->
+		<div class="wrap">
+			<div class="flow_h2 clear">
+				<div class="left mycart_text">我的购物车</div>
+				<a href="#" class="right cartSms" >
+					<img src="img/shouji.gif" width="22" height="22px"/>
+					免费发送购物车到手机
+				</a>
+				<a href="#" class="right shoppinglist" style="display: none;">
+					<img src="img/shoppinglist.gif" width="133" height="32"/>
+				</a>
+			</div>
+		</div>
+		<!--购物表单-->
+		<form action="" method="post" id="JS_pre_check_form" target="_self" style="display: none;">
+			<table class="w mt20 cart_table" id="JS_list_table_cb">
+				<tbody>
+					<tr>
+						<th class="first"><input type="checkbox" class="JS_checkall_cb" checked="checked" title="全选"></th>
+						<th style="width:36px" class="lbn l">全选</th>
+						<th style="" colspan="2">商品</th>
+						<th style="width:8%">单价</th>
+						<th style="width:15%">数量</th>
+						<th style="width:8%">折扣</th>
+						<th style="width:8%">金额</th>
+						<th style="width:8%">优惠</th>
+						<th style="width:10%">操作</th>
+					</tr>
+				</tbody>
+				<tbody class="pt_box">
+					<tr>
+						<td><input data-key="1" id="JS_cart_shop_1" type="checkbox" checked="checked"></td><td colspan="9" class="pt_name"><label for="JS_cart_shop_1">美乐乐自营</label><span class="JS_mj_span"></span></td>
+					</tr>
+				</tbody>
+				<!--拼接出来-->
+						<tbody class="pt_box">
+					<tr>
+						<td colspan="10" class="pt_name"></td>
+					</tr>
+				</tbody>
+				<tbody class="cart_extra">
+					<tr>
+						<th class="first rbn"><input type="checkbox" class="JS_checkall_cb" checked="checked" title="全选"></th>
+						<th class="lbn l">全选</th>
+						<th colspan="2" class="lbn l">
+							<a href="javascript:;" class="delete_cart_goods" title="删除选中商品">删除选中商品</a></th>
+						<th colspan="6" class="lbn r">
+							<span class="selected-tip">已选<b class="selected-number f14" id="JS_selected_goods_number">&nbsp;1&nbsp;</b>件商品</span>
+							<span class="color3">商品总价（不含运费）</span>
+							<span class="red yen total_price"><span class="f24">¥</span>
+							<span id="JS_after" class="f24">2499</span></span>
+						</th>
+					</tr>
+				</tbody>
+			</table>
+			<div class="cart_button w r" style="margin-top: 20px;">
+				<a href="#" class="back" title="继续购物"></a>&ensp;
+				<a title="去结算" href="javascript:;" class="check"></a>
+			</div>
+		</form>
+		<!--购物车没东西时的页面-->
+		<div class="nogoods clear" style="display: none;">
+			<div class="left icon"></div>
+			<div class="left main">
+				<div class="strong">您的购物车中暂时没有商品！</div>
+				<div class="search">
+					<form action="">
+						<a href="#" class="go_buy" title="马上挑选商品"></a>
+						<span class="f14 gray">或者试试搜索</span>
+						<input class="text" name="keywords"><input class="submit" type="button" value="确 定">
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="footer">
+			<div class="foot_icon">
+				<div class="wrap">
+					<a href="#">
+						<i class="icon_1"></i>
+						<span>网商+体验馆</span>
+					</a>
+					<a href="#">
+						<i class="icon_2"></i>
+						<span>100%正品</span>
+					</a>
+					<a href="#">
+						<i class="icon_3"></i>
+						<span>双重质检</span>
+					</a>
+					<a href="#">
+						<i class="icon_4"></i>
+						<span>全球化采购</span>
+					</a>
+					<a href="#">
+						<i class="icon_5"></i>
+						<span>无理由退款</span>
+					</a>
+					<a href="#">
+						<i class="icon_6"></i>
+						<span>贵就赔</span>
+					</a>
+					<a href="#">
+						<i class="icon_7"></i>
+						<span>万千口碑</span>
+					</a>
+				</div>
+			</div>
+			<div class="foot_extend">
+				<div class="wrap">
+					<ul class="foot_link">
+						<li>
+							<div class="switch">
+								<span>热门城市:</span>
+								<a href="#">北京家具</a>
+								<a href="#">上海家具</a>
+								<a href="#">重庆家具</a>
+								<a href="#">深圳家具</a>
+								<a href="#">广州家具</a>
+								<a href="#">成都家具</a>
+								<a href="#">佛仙家具</a>
+								<a href="#">长沙家具</a>
+								<a href="#">苏州家具</a>
+								<a href="#">天津家具</a>
+								<a href="#">福州家具</a>
+								<a href="#">郑州家具</a>
+								<a href="#">昆明家具</a>
+								<a href="#">东莞家具</a>
+								<a href="#">西安家具</a>
+								<a href="#">济南家具</a>
+							</div>
+						</li>
+						<li>
+							<div class="switch">
+								<span>友情链接:</span>
+								<a href="#">地产中国网</a>
+								<a href="#">中国房地产网</a>
+								<a href="#">亿智蘑菇</a>
+								<a href="#">湖北招考网</a>
+								<a href="#">土巴兔装修网</a>
+								<a href="#">西祠胡同</a>
+								<a href="#">搜狐焦点家居</a>
+								<a href="#">酷我音乐</a>
+								<a href="#">西陆新闻</a>
+								<a href="#">装修</a>
+								<a href="#">当贝市场</a>
+								<a href="#">安卓网</a>
+								<a href="#">女性</a>
+								<a href="#">土木工程网</a>
+								<a href="#">北京房产</a>
+								<a href="#">凤凰</a>
+							</div>
+							<i></i>
+						</li>
+					</ul>
+					<div class="foot_bot">
+						<ul>
+							<li>
+								<a href="#">家具图片</a> | 
+								<a href="#">家居资讯</a> | 
+								<a href="#">生活百科</a> | 
+								<a href="#">私家导购</a> | 
+								<a href="#">品牌展示</a> | 
+								<a href="#">装修论坛</a> | 
+								<a href="#">装修效果图</a> | 
+								<a href="#">客服中心</a> | 
+								<a href="#">网站地图</a> | 
+								<a href="#">友情链接</a> | 
+								<a href="#">跟多</a>
+							</li>
+							<li>
+								© 2005-2016 美乐乐 版权所有，并保留所有权利。
+								<a href="">ICP备案证书号：粤ICP备08008334号</a>
+							</li>
+						</ul>
+						<ul class="credit">
+							<li class="spec">
+								<a href="#">
+									<i class="icon_01"></i>
+									<span>诚信网站</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="icon_01"></i>
+									<span>诚信网站示范企业</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="icon_03"></i>
+									<span>可信网站新用评价</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="icon_04"></i>
+									<span>经营网站备案信息</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/cart.js" type="text/javascript" charset="utf-8"></script>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+	</head>
+	<body>
+		<!--头部-->
+		<div class="head">
+			<div class="wrap clear">
+				<div class="login_logo left">
+					<a href="index.html">
+						<img src="img/flow2.png" width="160" height="52"/>
+					</a>
+				</div>
+				<div class="login_right right">
+					<a href="index.html">返回首页</a> | 
+					<a href="#">帮助中心</a>
+				</div>
+			</div>
+		</div>
+		<!--中间注册的表单-->
+		<div class="main">
+			<div class="wrap ">
+				<div class="reg clear">
+				<!--注册表单-->
+					<div class="user_reg left">
+						<form action="php/register.php" method="post">
+							<div class="formbox">
+								<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>帐户名：
+									</label>
+									<input type="text" name="username" class="username" value="" />
+									<span class="success"></span>
+									<div class="errorname error">用户名可使用字母、汉字、数字、下划线或其组合，4～20个字符，且不能为纯数字</div>
+								</div>
+								<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>设置密码：
+									</label>
+									<input type="text" name="password" class="password" value="" />
+									<span class="success"></span>
+									<div class="errorpwd error">6-20位，支持字母、数字或符号的组合，不可单独使用字母、数字或符号</div>
+								</div>
+								<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>确认密码：
+									</label>
+									<input type="text" name="repassword" class="repassword" value="" />
+									<span class="success"></span>
+									<div class="errorpwd2 error"></div>
+								</div>
+								<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>手机号码：
+									</label>
+									<input type="text" name="phone" class="phone" value="" />
+									<span class="success"></span>
+									<div class="errorphone error"></div>
+								</div>
+								<div class="hang">
+									<label class="tips">
+										<span class="red">*</span>验证码：
+									</label>
+									<input type="text" name="reg-check" class="reg-check" value="" />
+									
+									<span class="success"></span>
+									<div class="erroryzm error"></div>
+								</div>
+								<div class="check">
+									<input type="checkbox" checked="checked" class="readycheck"/>
+									<label for="" style="margin-left: -4px;">请阅读<a href="#">《<span class="blue">美乐乐用户注册协议》</span></a></label>
+								</div>
+								<div class="reg_submit">
+									<input type="button" value="注册" class="btn_reg" name="submit"/>
+								</div>
+							</div>
+						</form>
+					</div>
+					<!--注册表单右侧-->
+					<div class="user_reg_right right">
+						<div class="user_ok_register">
+							<span>已注册？</span>
+							<a href="#" class="login_a">登录</a>
+						</div>
+						<div class="login_api">
+							<div class="img_login2">
+								<img src="img/vchat.jpg" width="120" height="120"/>
+								<p>微信扫一扫，快速登录</p>
+							</div>
+							<div class="share">
+								<span class="api_tips">使用合作账号登录：</span>
+								<br />
+								<span class="api_form">
+									<a href="#" class="qq"></a>
+									<a href="#" class="sina"></a>
+									<a href="#" class="alipay"></a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<!--底部-->
+		<div class="footer">
+			<div class="foot_icon">
+				<div class="wrap">
+					<a href="#">
+						<i class="icon_1"></i>
+						<span>网商+体验馆</span>
+					</a>
+					<a href="#">
+						<i class="icon_2"></i>
+						<span>100%正品</span>
+					</a>
+					<a href="#">
+						<i class="icon_3"></i>
+						<span>双重质检</span>
+					</a>
+					<a href="#">
+						<i class="icon_4"></i>
+						<span>全球化采购</span>
+					</a>
+					<a href="#">
+						<i class="icon_5"></i>
+						<span>无理由退款</span>
+					</a>
+					<a href="#">
+						<i class="icon_6"></i>
+						<span>贵就赔</span>
+					</a>
+					<a href="#">
+						<i class="icon_7"></i>
+						<span>万千口碑</span>
+					</a>
+				</div>
+			</div>
+			<div class="foot_extend">
+				<div class="wrap">
+					<ul class="foot_link">
+						<li>
+							<div class="switch">
+								<span>热门城市:</span>
+								<a href="#">北京家具</a>
+								<a href="#">上海家具</a>
+								<a href="#">重庆家具</a>
+								<a href="#">深圳家具</a>
+								<a href="#">广州家具</a>
+								<a href="#">成都家具</a>
+								<a href="#">佛仙家具</a>
+								<a href="#">长沙家具</a>
+								<a href="#">苏州家具</a>
+								<a href="#">天津家具</a>
+								<a href="#">福州家具</a>
+								<a href="#">郑州家具</a>
+								<a href="#">昆明家具</a>
+								<a href="#">东莞家具</a>
+								<a href="#">西安家具</a>
+								<a href="#">济南家具</a>
+							</div>
+						</li>
+						<li>
+							<div class="switch">
+								<span>友情链接:</span>
+								<a href="#">地产中国网</a>
+								<a href="#">中国房地产网</a>
+								<a href="#">亿智蘑菇</a>
+								<a href="#">湖北招考网</a>
+								<a href="#">土巴兔装修网</a>
+								<a href="#">西祠胡同</a>
+								<a href="#">搜狐焦点家居</a>
+								<a href="#">酷我音乐</a>
+								<a href="#">西陆新闻</a>
+								<a href="#">装修</a>
+								<a href="#">当贝市场</a>
+								<a href="#">安卓网</a>
+								<a href="#">女性</a>
+								<a href="#">土木工程网</a>
+								<a href="#">北京房产</a>
+								<a href="#">凤凰</a>
+							</div>
+							<i></i>
+						</li>
+					</ul>
+					<div class="foot_bot">
+						<ul>
+							<li>
+								<a href="#">家具图片</a> | 
+								<a href="#">家居资讯</a> | 
+								<a href="#">生活百科</a> | 
+								<a href="#">私家导购</a> | 
+								<a href="#">品牌展示</a> | 
+								<a href="#">装修论坛</a> | 
+								<a href="#">装修效果图</a> | 
+								<a href="#">客服中心</a> | 
+								<a href="#">网站地图</a> | 
+								<a href="#">友情链接</a> | 
+								<a href="#">跟多</a>
+							</li>
+							<li>
+								© 2005-2016 美乐乐 版权所有，并保留所有权利。
+								<a href="">ICP备案证书号：粤ICP备08008334号</a>
+							</li>
+						</ul>
+						<ul class="credit">
+							<li class="spec">
+								<a href="#">
+									<i class="icon_01"></i>
+									<span>诚信网站</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="icon_01"></i>
+									<span>诚信网站示范企业</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="icon_03"></i>
+									<span>可信网站新用评价</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="icon_04"></i>
+									<span>经营网站备案信息</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/register.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
